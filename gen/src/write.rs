@@ -1217,7 +1217,6 @@ fn write_type(out: &mut OutFile, ty: &Type) {
                         write_type(out, &slice.inner);
                     }
                 }
-            }
             } else {
                 write_type(out, &slice.inner);
             }
