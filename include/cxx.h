@@ -158,6 +158,7 @@ public:
 
   Slice() noexcept;
   Slice(T *, std::size_t count) noexcept;
+  Slice(std::reference_wrapper<T> *, std::size_t count) noexcept;
 
   Slice &operator=(const Slice<T> &) &noexcept = default;
   Slice &operator=(Slice<T> &&) &noexcept = default;
