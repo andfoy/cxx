@@ -1205,7 +1205,7 @@ fn write_type(out: &mut OutFile, ty: &Type) {
         Type::SliceRef(slice) => {
             write!(out, "::rust::Slice<");
             if slice.mutability.is_none() {
-                match slice.inner {
+                match &slice.inner {
                     Type::Ref(r) => {
                         // let inner_ref = r.inner;
                         write!(out, "std::reference_wrapper<");
