@@ -1208,18 +1208,17 @@ fn write_type(out: &mut OutFile, ty: &Type) {
                 match &slice.inner {
                     Type::Ref(r) => {
                         // let inner_ref = r.inner;
-                        write!(out, "std::reference_wrapper<");
-                        write_type(out, &r.inner);
-                        write!(out, ">");
+                        // write!(out, "std::reference_wrapper<");
+                        // write_type(out, &r.inner);
+                        write!(out, "");
                     }
                     _ => {
                         write!(out, "const ");
                         write_type(out, &slice.inner);
                     }
                 }
-            } else {
-                write_type(out, &slice.inner);
             }
+            write_type(out, &slice.inner);
             write!(out, ">");
         }
         Type::Fn(f) => {
