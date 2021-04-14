@@ -1214,7 +1214,7 @@ fn write_type(out: &mut OutFile, ty: &Type) {
                     }
                     _ => {
                         write!(out, "const ");
-                        write_type(out, &slice.inner);
+                        // write_type(out, &slice.inner);
                     }
                 }
             }
