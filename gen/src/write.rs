@@ -1210,7 +1210,7 @@ fn write_type(out: &mut OutFile, ty: &Type) {
                         // let inner_ref = r.inner;
                         write!(out, "std::reference_wrapper<");
                         write_type(out, &r.inner);
-                        // write!(out, "");
+                        write!(out, ">");
                     }
                     _ => {
                         write!(out, "const ");
